@@ -1,28 +1,20 @@
 #include <stdio.h>
 
+
 int main () {
 
 // Carta 1   
 char estado1;
-char Codigo1 [50];
+char Codigo1 [07] ;
 char cidade1 [50];
-int populacao1;
-float area1;
-float pib1;
-int turisticos1;
-float densidade1;
-float capita1 = (float) pib1 / populacao1;
+int populacao1 = 12325000;
+float area1 = 1521.11;
+float pib1 = 699280000000;
+int turisticos1 = 50 ;
+float densidade1 = populacao1 / area1;
+float capita1 = (float) pib1 / populacao1;;
+double superpoder1 = (long double) (populacao1 + area1 + pib1 + turisticos1);
 
-// Carta 2
-char estado2 [3];
-char Codigo2 [50];
-char cidade2 [50];
-int populacao2;
-float area2;
-float pib2;
-int turisticos2;
-float densidade2;
-float capita2;
 
 // Código carta 1
 printf ("Digitie o estado da Carta 1(A-H): \n" );
@@ -34,20 +26,23 @@ scanf ("%s", &Codigo1);
 printf ("Digite o nome da cidade da carta 1: \n");
 scanf ("%49s", &cidade1);
 
-printf ("Digite a populacao da carta 1: \n");
-scanf ("%d", &populacao1);
-
-printf ("Digite a area da cidade da carta 1 : \n");
-scanf ("%f", &area1);
-
-printf ("Digite o PIB da cidade da carta 1: \n");
-scanf ("%f", &pib1);
-
-printf ("Digite o numero de ponto turisticos da carta 1: \n");
-scanf ("%d", &turisticos1);
 
 densidade1 = populacao1 / area1;
 capita1 = pib1 / populacao1;
+
+// Carta 2
+char estado2 [3];
+char Codigo2 [07];
+char cidade2 [50];
+int populacao2 = 6748000; 
+float area2 = 1200.25;
+float pib2 = 300500000000;
+int turisticos2 = 30;
+float densidade2 = populacao2 / area2;
+float capita2 =  (float) pib1 / populacao1;
+double superpoder2 = (populacao2 + area2 + pib2 + turisticos2);
+float resultado1 = densidade1 > densidade2;
+float resultado2 = densidade2 < densidade2;
 
 // Código carta 2
 printf ("Digitie o estado da carta 2(A-H): \n" );
@@ -59,22 +54,8 @@ scanf("%3s", Codigo2);
 printf ("Digite o nome da cidade da carta 2: \n");
 scanf ("%49s", &cidade2);
 
-printf ("Digite a populacao da carta 2: \n");
-scanf ("%d", &populacao2);
 
-printf ("Digite a area da cidade da carta 2 : \n");
-scanf ("%f", &area2);
-
-printf ("Digite o PIB da cidade da carta 2: \n");
-scanf ("%f", &pib2);
-
-printf ("Digite o numero de ponto turisticos da carta 1: \n");
-scanf ("%d", &turisticos2);
-
-densidade2 = populacao2 / area2;
-capita2 = pib2 / populacao2;
-
-//  carta 1
+// Exibição carta 1
 printf("\ninformacoes da carta 1:\n");
 printf ("Estado: %c \n", estado1);
 printf ("Código: %s \n", Codigo1);
@@ -85,6 +66,7 @@ printf ("PIB:  %.2f bilhões de reais \n", pib1);
 printf ("Número de pontos Turísticos: %d \n", turisticos1);
 printf ("Densidade Populacional: %.2f km² \n", densidade1);
 printf ("PIB por Capita: %.2F reais \n", capita1);
+printf ("Super poder carta 1 : %.2f\n", superpoder1);
 
 // Exibição carta 2
 printf("\ninformacoes da carta 2:\n");
@@ -97,6 +79,17 @@ printf ("PIB:  %.2f bilhões de reais \n", pib2);
 printf ("Número de pontos Turísticos: %d \n", turisticos2);
 printf ("Densidade Populacional: %.2f km² \n", densidade2);
 printf ("PIB por Capita: %.2f reais \n", capita2);
+printf ("Super poder carta 2 : %.2f\n", superpoder2);
+
+// Comparações de carta 
+printf("\nComparações:\n");
+printf ("Poupulação carta 1 é maior que a população da carta 2? %d\n",  populacao1 > populacao2);
+printf ("Area carta 1 é maior que a Area da carta 2? %d\n", area1 > area2);
+printf ("PIB carta 1 é maior que a PIB da carta 2? %d\n", pib1 > pib2);
+printf ("Ponto Turísticos da carta 1 é maior que o Ponto Turísticos da carta 2? %d\n", turisticos1 > turisticos2);
+printf ("Densidade Populacional da carta 1 é menor que a Densidade Populaciona da carta 2? %d\n",densidade1 < densidade2 );
+printf ("Pib por Capita da carta 1 é maior que o Pib por Capita da carta 2? %d\n", capita1 > capita2);
+printf ("Super Poder  da Carta 1 é maior que o Super poder da carta 2? %d\n", superpoder1 > superpoder2);
 
 return 0;
 
