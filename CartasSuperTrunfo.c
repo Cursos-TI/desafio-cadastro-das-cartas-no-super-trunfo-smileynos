@@ -5,7 +5,7 @@ int main () {
 
 // Carta 1   
 char estado1;
-char Codigo1 [7];
+char Codigo1 [07] ;
 char cidade1 [50];
 int populacao1 = 12325000;
 float area1 = 1521.11;
@@ -27,10 +27,9 @@ printf ("Digite o nome da cidade da carta 1: \n");
 scanf ("%49s", &cidade1);
 
 
-
 // Carta 2
 char estado2;
-char Codigo2 [7];
+char Codigo2 [07];
 char cidade2 [50];
 int populacao2 = 6748000; 
 float area2 = 1200.25;
@@ -44,7 +43,7 @@ float resultado2 = densidade2 < densidade2;
 
 // Código carta 2
 printf ("Digitie o estado da carta 2(A-H): \n" );
-scanf ("%2s", &estado2);
+scanf ("%2S", &estado2);
 
 printf ("Digitie o Código carta 2 (ex: A01): \n" );
 scanf("%3s", Codigo2);
@@ -54,9 +53,9 @@ scanf ("%49s", &cidade2);
 
 
 // Exibição carta 1
-printf("\nCarta 1:\n");
+printf("\ninformacoes da carta 1:\n");
 printf ("Estado: %c \n", estado1);
-printf ("Codigo: %s \n", Codigo1);
+printf ("Código: %s \n", Codigo1);
 printf ("Nome da Cidade: %s \n", cidade1);
 printf ("População: %d \n", populacao1);
 printf ("Area: %.2f km² \n", area1);
@@ -67,9 +66,9 @@ printf ("PIB por Capita: %.2F reais \n", capita1);
 printf ("Super poder carta 1 : %.2f\n", superpoder1);
 
 // Exibição carta 2
-printf("\nCarta 2:\n");
+printf("\ninformacoes da carta 2:\n");
 printf ("Estado: %c \n", estado2);
-printf ("Codigo: %s \n", Codigo2);
+printf ("Código: %s \n", Codigo2);
 printf ("Nome da Cidade: %s \n", cidade2);
 printf ("População: %d \n", populacao2);
 printf ("Area: %.2f km² \n", area2);
@@ -81,72 +80,13 @@ printf ("Super poder carta 2 : %.2f\n", superpoder2);
 
 // Comparações de carta 
 printf("\nComparações:\n");
-if (populacao1 > populacao2) {
-    /* code */
-printf ("Carta1 venceu\n");
-
-}else {
-    /* code */
-    printf ("carta2 venceu\n");
-}
-
-
-if (area1 > area2) {
-    /* code */
-printf ("Carta1 venceu\n");
-
-}else {
-    /* code */
-    printf ("carta2 venceu\n");
-    
-}
-
-if (pib1 > pib2) {
-    /* code */
-printf ("Carta1 venceu\n");
-
-}else {
-    /* code */
-    printf ("carta2 venceu\n");
-}
-
-if (turisticos1 > turisticos2) {
-    /* code */
-printf ("Carta1 venceu\n");
-
-}else {
-    /* code */
-    printf ("carta2 venceu\n");
-}
-
-
-if (densidade1 < densidade2) {
-    /* code */
-printf ("Carta1 venceu\n");
-
-}else {
-    /* code */
-    printf ("carta2 venceu\n");
-}
-
-if (capita1 > capita2) {
-    /* code */
-printf ("Carta1 venceu\n");
-
-}else {
-    /* code */
-    printf ("carta2 venceu\n");
-}
-
-if (superpoder1 > superpoder2) {
-    /* code */
-printf ("Carta1 venceu\n");
-
-}else {
-    /* code */
-    printf ("carta2 venceu\n");
-}
-
+printf ("Poupulação carta 1 é maior que a população da carta 2? %d\n",  populacao1 > populacao2);
+printf ("Area carta 1 é maior que a Area da carta 2? %d\n", area1 > area2);
+printf ("PIB carta 1 é maior que a PIB da carta 2? %d\n", pib1 > pib2);
+printf ("Ponto Turísticos da carta 1 é maior que o Ponto Turísticos da carta 2? %d\n", turisticos1 > turisticos2);
+printf ("Densidade Populacional da carta 1 é menor que a Densidade Populaciona da carta 2? %d\n",densidade1 < densidade2 );
+printf ("Pib por Capita da carta 1 é maior que o Pib por Capita da carta 2? %d\n", capita1 > capita2);
+printf ("Super Poder  da Carta 1 é maior que o Super poder da carta 2? %d\n", superpoder1 > superpoder2);
 
 return 0;
 
